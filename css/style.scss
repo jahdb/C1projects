@@ -1,0 +1,288 @@
+/* this is set to accomodate the size of the border so it can be the actual size you want it to be & it includes the padding & border */
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+  }
+  
+  /* remember this is set to zero so that way everything can be put right next to border of screen */
+  body {
+    margin: 0; 
+  }
+  
+  
+  /* remember I'm using flexbox here to display the links and logo to line up side by side. I'm justifying content with space between to push them as far from each other as possible. I aligned items center so they can be right in the center from top to bottom*/
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+  }
+  
+  /* I added margin here so it doesn't line up right at the end of the screen */
+  .logo {
+    font-size: 1.9rem;
+    margin: .5rem;
+  }
+  
+  /* text-decoration: none was used to remove the underline on the list items*/
+  .logo a {
+    text-decoration: none;
+    color: #8e87fb;
+  }
+  
+  /* display flex was used here to easily align items inside of the list side by side and to space them out properly*/
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  /* so the colons don't show up on your list*/
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  /* text-decoration: none was used to remove the underline on the list items, added padding around each li to make space & display block to show up at a larger size*/
+  .navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    display: block;
+  }
+  
+  /* added pseudo-class state of hover */
+  .navbar-links li:hover {
+    background-color: #8e87fb;
+  }
+  
+  /* positioning absolutely to force it to be all the way to the the right side of the screen without messing with the flow of the rest of the elements. top: .75rem so that it's not at the very top of screen & same for right side. Display none so that it doesn't show up on larger screens. Flex direction set to column so they can align on top of each other. Justify to have as much space inside toggle botton for content*/
+  .toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  /* media query used for when this certain condition is met, run the code inside of here, but if it's not met then don't run it. If the max-width of screen is 400px or less (so if screen is less than 400px wide the code will run inside this media query). Toggle button set to flex so that the hamburger actually shows up and is visible & navbar links set to none so it doesn't display still need to continue for the entire page */
+  @media (max-width: 400px) {
+    .toggle-button {
+      display: flex;
+    }
+    
+    
+    /* display set to flex for now so that links don't disappear when media query hits, you have to use java in order to make toggle button work so that when you do learn how to make the toggle go up and down with java then you can set display to none so that when screen gets smaller links don't show up. */
+    .navbar-links {
+      display: flex;
+      width: 100%;
+    }
+    
+    /* flex direction to column so that when screen gets smaller the brand is above the links and they are above and below each other. I aligned items to flext-start to align everything back to the left.mostly the logo and edits were made for the links to be centered */
+    .navbar { 
+    flex-direction: column;
+    align-items: flex-start;
+    }
+    
+    /* links set to column so they are stacked above each other */
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    /*centering the links when screen is smaller */
+    .navbar-links li {
+      text-align: center;
+    }
+    
+    /*padding to make the links closer spaced together */
+    .navbar-links li a {
+      padding: .5rem 1rem;
+    }
+    
+    /* active class used so when this query is active the links are flexed - .active is used because this way it is not applied automatically only when the query is active. If you wanted this to apply automatically as soon as browswer opens then the pseudo class: would be used. */
+    .navbar-links.active {
+      display: flex;
+    }
+    
+    }
+  
+  .socials li {
+    list-style: none;
+  }
+  
+  h1{
+    font-size: 3.5em;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    
+    border-right: solid 3px white;
+    
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    
+  animation: 
+  type 2s steps(30) 1s forwards,
+    blink 1s infinite;
+  }
+  
+  @keyframes type {
+    to {width: 30ch}
+  }
+  
+  @keyframes blink {
+    from {border-color: transparent}
+    50% {border-color: #8e87fb}
+    to {border-color:  #8e87fb}
+  }
+  
+  h2 {
+    text-decoration: underline; 
+    font-size: 200%;
+    text-decoration-color: #8e87fb;
+  }
+  
+  p {
+     font-size: 150%;
+  }
+  
+  .welcome  {
+  background-image: linear-gradient(to bottom right, white, #8e87fb);
+  color: BLACK;
+  padding:25%;
+  text-align: center;
+  }
+  
+  .hello {
+    color: #8e87fb;
+  }
+  .about-me  {
+  background-color: black;
+  color: white;
+  padding:15%;
+  text-align: center;
+    
+    
+  animation-name: color-change;
+    animation-duration: 7s;
+  }
+  
+  @keyframes color-change{
+    from {background-color: black;}
+    to {background-color: #8e87fb;}
+  }
+  
+  
+  .blog-post  {
+  background-color: white;
+  color: #8e87fb;
+  padding:15%;
+  text-align: center;
+  }
+  
+  .skills {
+    text-align: left;
+    margin-left: 37%;
+  }
+  
+  .skills li {
+    font-size: 150%;
+  }
+  
+  /* eventually.....
+  .profile-pic  {
+  background-color: black;
+  color: white;
+  padding:25%;
+  text-align: center;
+  } */
+  
+  .contact-me  {
+  background-color: black;
+  color: white;
+  padding:15%;
+  text-align: center;
+  }
+  
+  input {
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, white, #8e87fb);
+  }
+  
+  .send-button {
+    background-color: #8e87fb; 
+    color: black;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .follow  {
+  background-color: white;
+  color: #8e87fb;
+  padding:15%;
+  text-align: center;
+  }
+  
+  
+  .follow a li {
+    color: black;
+    list-style: none;
+    margin-left: 20em;
+    border: 1px solid #5850ff;
+    border-radius: 10px;
+    width: 30em;
+    background-image: linear-gradient(to bottom right, white, #8e87fb);
+  }
+  
+  
+  .follow ul a {
+    text-decoration: none;
+  }
+  
+  .follow a li:hover {
+    background-color: #8e87fb;
+    color: white;
+  }
+  
+  
+  .copyright {
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  
+  label{
+   color: white;
+    text-shadow:
+        0 0 7px white,
+        0 0 10px white,
+        0 0 21px white,
+        0 0 42px white,
+        0 0 82px white,
+        0 0 92px white,
+        0 0 102px white,
+        0 0 151px white;
+  }
+  
+  
+  .send {
+    color: white; 
+    background-color: #8e87fb;
+  }
+  
+  
+  
+  
+  
