@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project.css">
     <title>My Portfolio</title>
     <meta name="description" content="This is my personal website and portfolio page">
 </head>
@@ -21,7 +22,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="projects.html">Projects</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                   </div>
@@ -32,15 +33,19 @@
             <section id="welcome-page">
               <div class="welcome">
                 <a name="welcome"></a>
-                <h1>Welcome to my portfolio...</h1>
+                <h1 class="typewords">Welcome to my Portfolio</h1><br><br><br>
+                <div class="welcome-arrow">&#8595;</div>
               </div>
             </section>
+
+        
+
 
             <section class="about-page">
                 <div class="about-me">
                   <a name="about"></a>
                     <!--transition right & make hello do something special-->
-                   <div class="about-wrap"> <h2>About</h2>
+                   <div class="about-wrap"> <h2>About</h2><br><br>
                     <p><strong class="hello">Hello!</strong> My name is Jahdai Bruno. Before you take a look at my portfolio 
                         I'd like you to get to know more about the person behind this creation.
                         I was born and raised in Phoenix, Arizona, 26 years old, and am happily married; 
@@ -50,53 +55,66 @@
                         a logistics coordinator III, I received the opportunity to enroll in a program for software
                         development. This page is to showcase what I have learned. It will continue to 
                         improve overtime the more I learn. My career goal is to work in the field of technology.
-                        My top motto is don't stop until you figure it out. My second is never give up. Thank you for your view and enjoy!
-                    </p>
-                  </div>
-                </div>
-            </section>
-
-            <section class="blog">
-                <div class="blog-post">
-                  <a name="blogs"></a>
-                    <h2>Blog</h2>
-                        <p>As mentioned earlier, I am currently enrolled 
+                        I am currently enrolled 
                         in a software development program at Correlation One!
-                        Skills thus far:</p>
+                        <br><br><p>Skills thus far:</p><br><br>
                         <ul class="skills">
                             <li>Advanced HTML/CSS</li><br>
                             <li>HTML page design</li><br>
-                            <li>Animation, Responsive Design</li>
+                            <li>Animation, Responsive Design</li><br>
+                            <li>Intermediate javascript</li></li><br><br>
                         </ul> 
                         <p>I am in the process of expanding my knowledge in this field and will 
                         continue to develop more skills as I venture on this new path I am 
                         embarking. 
-                  </p></div>
-                 <!--</div class="profile-pic">
-               find a profile pic to post here
-                <div class="profile-pic">
-                    paste profile pic here
-                </div>--> </section>
+                  </p>
+                  
+                  </div>
+                </div>
+            </section>
+      
               
+
+                <section class= "projects">
+                  
+  <div class="container">
+    <div class="project-heading">
+      <div class="subtitle"></div>
+    </div>
+
+    <div id="slider">
+      <img src="https://images.pexels.com/photos/1537875/pexels-photo-1537875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1">
+      <img src="https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
+      <img src="https://images.pexels.com/photos/2255441/pexels-photo-2255441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3">
+      <img src="https://images.pexels.com/photos/5981926/pexels-photo-5981926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 4">
+      <button id="prev">&lt;</button>
+      <button id="next">&gt;</button>
+    </div>
+  </div>
+
+
+  <script src="javascript/main.js"></script>
+                </section>
               
               <section class="contact">
                 <div class="contact-me">
                   <a name="contact"></a>
   <form action="/action_page.php">
     <h2>Contact</h2><br><br>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="contact"><br><br><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="contact"><br><br><br>
-     <label for="email">Email:</label><br>
-    <input type="text" id="email" name="contact"><br><br><br>
-    <input type="submit" value="Send" class="send-button">
+   
+    <input type="text" id="fname" name="contact" placeholder="FIRST NAME:"> <br><br><br>
+   
+    <input type="text" id="lname" name="contact" placeholder="LAST NAME:"><br><br><br>
+     
+    <input type="text" id="email" name="contact" placeholder="EMAIL:" ><br><br><br>
+<button id="send">Send</button>
   </form>
 </div>
             </section>
 
-        </main>
-          
+
+
+       </main>    
       <footer>
          <div class="follow">
               <h2>Follow me on:</h2>
@@ -112,7 +130,7 @@
         </div>
 
           </footer>
-
+         
     </body>
 </html>
 

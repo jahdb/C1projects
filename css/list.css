@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+input {
+  padding: 2% 40%;
+}
+
+#add-task {
+  padding: 1.5%;
+  font-size: 30px;
+}
+
+li {
+  font-size: 40px;
+  list-style: none;
+}/*# sourceMappingURL=list.css.map */
